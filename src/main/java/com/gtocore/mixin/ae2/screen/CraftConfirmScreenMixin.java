@@ -1,6 +1,7 @@
 package com.gtocore.mixin.ae2.screen;
 
 import com.gtocore.config.GTOConfig;
+import com.gtocore.utils.NotificationUtils;
 
 import com.gtolib.api.ae2.gui.hooks.IStylelessCompositeWidget;
 
@@ -80,6 +81,10 @@ public class CraftConfirmScreenMixin extends AEBaseScreen<CraftConfirmMenu> {
                         return new Rect2i(0, 0, 0, 0);
                     }
                 });
+
+        NotificationUtils.notify(
+                "Screen Opened",
+                "AE2 Craft Confirm Screen");
     }
 
     @Unique
